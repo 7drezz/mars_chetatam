@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        {% set user = ['rrr', 'ttt', 'yyy'] %}
+        <ul>
+            {% for u in user %}
+            <li>
+                {{ loop.index }} - {{ u }}
+                {% if loop.first %} первый в очереди
+                {% elif loop.last %} последний
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
